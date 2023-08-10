@@ -1,9 +1,8 @@
-import axios from "axios"
-import { useState } from "react";
+
 function Client_maker(){
     return(
     <>
-    
+    <h1>olá </h1>
     </>
     )
 }

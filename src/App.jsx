@@ -1,8 +1,5 @@
-import { useState } from 'react'
-import { BrowserRouter,Routes,Route,Switch } from "react-router-dom"
-import Provider_maker from './pages/cadastro_prov'
+import { BrowserRouter,Routes,Route} from "react-router-dom"
 import Resetstyle from './reset'
-import Serve_answer from './assets/serve_answer'
 import Login from './pages/Login_page'
 
 function App() {
@@ -12,6 +9,7 @@ function App() {
         <BrowserRouter>
           <Routes>        
             <Route path='/' element={<Login />}/>
+            <Route path='/cadastro_cliente' element={<Client_maker />}/>
           </Routes>
         </BrowserRouter>
     </>
