@@ -1,14 +1,13 @@
 import { BrowserRouter,Routes,Route} from "react-router-dom"
 import Resetstyle from './reset'
-import Login from './pages/Login_page'
-
+import Login1 from './pages/Login_page'
 function App() {
-  return (
+  return (    
     <>
       <Resetstyle />
         <BrowserRouter>
           <Routes>        
-            <Route path='/' element={<Login />}/>
+            <Route path='/'  element={<Login1 />}/>
             <Route path='/cadastro_cliente' element={<Client_maker />}/>
           </Routes>
         </BrowserRouter>
