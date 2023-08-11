@@ -25,12 +25,9 @@ function Login1(){
             <label for="password">password:</label><br/><br/>
             <input type="password" id="password" name="password" value={password}
             onChange={(event)=>setPassword(event.target.value)}/><br/><br/>
-            <label for="password">Confirm  password:</label><br/><br/>
-            <input type="password" id="password" name="password" value={confPassword}
-            onChange={(event)=>setconfirm(event.target.value)}/><br/><br/>
             </form>
-            <button onClick={()=>Login_server()} >olá</button><br/><br/>
-            <Link to={'/cadastro'}> ainda não é cadrastado clique aqui</Link>   
+            <button onClick={()=>Login_server()} >send</button><br/><br/>
+            <Link to={'/cadastro'}>ainda não é membro crie sua conta e siga o bushido</Link>   
         </>
     )
 }
