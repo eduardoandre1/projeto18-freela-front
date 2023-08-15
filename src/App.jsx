@@ -1,7 +1,7 @@
 import { BrowserRouter,Routes,Route} from "react-router-dom"
 import Resetstyle from './reset'
 import Login1 from './pages/Loginpage'
-import ClientMaker from "./pages/cadastroClient"
+//import ClientMaker from "./pages/cadastroClient"
 import { useState } from "react"
 import  { UseContextLab }   from "./createContext"
 import { ServicesMaker } from "./pages/create_serviçe"
