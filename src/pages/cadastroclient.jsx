@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState }  from "react";
 import axios from "axios";
 
 function ClientMaker(){
@@ -19,7 +19,7 @@ function ClientMaker(){
         telephone:phone
     }
     function ClientServer(){
-        const server = ""
+        const server = "http://localhost:5000/sign_up"
         const promise = axios.post(server,user)
         promise.then((resposta)=>{alert('cadastrado')})
         promise.catch((resposta)=>{alert(resposta.response.data.message)})
