@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { UseContextLab } from "../createContext";
 
 function Login1(){
+    const {setToken,token} = useContext(UseContextLab)
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
-    const [confPassword,setconfirm] =useState('')
     const login ={
         email:email,
         password:password
@@ -13,7 +14,7 @@ function Login1(){
     function Login_server(){
         const server = "http://localhost:5000/sign_in"
         const promise = axios.post(server,login)
-        promise.then((resposta)=>{alert(resposta.data.token)})
+        promise.then((resposta)=>{setToken(resposta.data.token),alert(token)})
         promise.catch(()=>{alert('algo de errado')})
     }
     return(

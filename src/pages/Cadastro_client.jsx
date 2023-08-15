@@ -19,7 +19,7 @@ function ClientMaker(){
         telephone:phone
     }
     function ClientServer(){
-        const server = "http://localhost:5000/sign_up"
+        const server = ""
         const promise = axios.post(server,user)
         promise.then((resposta)=>{alert('cadastrado')})
         promise.catch((resposta)=>{alert(resposta.response.data.message)})

@@ -1,2 +1,2 @@
 import { createContext } from "react";
-export const UseContext = createContext(null)
+export const UseContextLab = createContext(null)

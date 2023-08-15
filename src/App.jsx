@@ -3,8 +3,8 @@ import Resetstyle from './reset'
 import Login1 from './pages/Loginpage'
 import ClientMaker from "./pages/cadastro_client"
 import { useState } from "react"
-import {UseContext} from "./createContext"
-import { useContext } from "react"
+import  { UseContextLab }   from "./createContext"
+import { ServicesMaker } from "./pages/create_serviçe"
 function App() {
   const [token,setToken] = useState('')
   const config = {
@@ -14,15 +14,16 @@ function App() {
   }
   return (    
     <>
-      <UseContext.Provider value={{config,token,setToken}}>
+      <UseContextLab.Provider value={{setToken,token,config}}>
       <Resetstyle />
         <BrowserRouter>
           <Routes>        
             <Route path='/'  element={<Login1 />}/>
             <Route path ="/cadastro" element={<ClientMaker />} />
+            <Route path="/produts" element={<ServicesMaker />} />
           </Routes>
         </BrowserRouter>
-      </UseContext.Provider>
+      </UseContextLab.Provider>
     </>
   )
 }
